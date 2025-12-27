@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "dotenv -e .env -- tsx watch --tsconfig ./tsconfig.app.json src/app.ts",
+    "type-check": "tsc -p tsconfig.app.json --noEmit",
+    "build": "tsup",
+    "start": "dotenv -e .env -- node dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.26.2",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "shared-types": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.10.4",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0"
+  }
+}

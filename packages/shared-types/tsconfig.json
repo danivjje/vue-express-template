@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "src",
+    "outDir": "dist",
+
+    "module": "nodenext",
+    "target": "esnext",
+    "moduleResolution": "nodenext",
+
+    "declaration": true,
+
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts"]
+}
