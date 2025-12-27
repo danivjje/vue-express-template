@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@types/node':
+        specifier: ^25.0.3
+        version: 25.0.3
       dotenv-cli:
         specifier: ^11.0.0
         version: 11.0.0
@@ -20,25 +23,22 @@ importers:
 
   apps/client:
     dependencies:
+      shared-types:
+        specifier: workspace:*
+        version: link:../../packages/shared-types
       vue:
         specifier: ^3.5.24
         version: 3.5.26(typescript@5.9.3)
     devDependencies:
-      '@types/node':
-        specifier: ^24.10.1
-        version: 24.10.4
       '@vitejs/plugin-vue':
         specifier: ^6.0.1
-        version: 6.0.3(vite@7.3.0(@types/node@24.10.4)(tsx@4.21.0))(vue@3.5.26(typescript@5.9.3))
+        version: 6.0.3(vite@7.3.0(@types/node@25.0.3)(tsx@4.21.0))(vue@3.5.26(typescript@5.9.3))
       '@vue/tsconfig':
         specifier: ^0.8.1
         version: 0.8.1(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3))
-      typescript:
-        specifier: ~5.9.3
-        version: 5.9.3
       vite:
         specifier: ^7.2.4
-        version: 7.3.0(@types/node@24.10.4)(tsx@4.21.0)
+        version: 7.3.0(@types/node@25.0.3)(tsx@4.21.0)
       vue-tsc:
         specifier: ^3.1.4
         version: 3.2.1(typescript@5.9.3)
@@ -67,9 +67,6 @@ importers:
       '@types/express':
         specifier: ^5.0.6
         version: 5.0.6
-      '@types/node':
-        specifier: ^24.10.4
-        version: 24.10.4
       tsup:
         specifier: ^8.5.1
         version: 8.5.1(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)
@@ -77,14 +74,7 @@ importers:
         specifier: ^4.21.0
         version: 4.21.0
 
-  packages/shared-types:
-    devDependencies:
-      '@types/node':
-        specifier: ^25.0.3
-        version: 25.0.3
-      typescript:
-        specifier: ~5.9.3
-        version: 5.9.3
+  packages/shared-types: {}
 
 packages:
 
@@ -412,9 +402,6 @@ packages:
 
   '@types/http-errors@2.0.5':
     resolution: {integrity: sha512-r8Tayk8HJnX0FztbZN7oVqGccWgw98T/0neJphO91KkmOzug1KkofZURD4UaD5uH8AqcFLfdPErnBod0u71/qg==}
-
-  '@types/node@24.10.4':
-    resolution: {integrity: sha512-vnDVpYPMzs4wunl27jHrfmwojOGKya0xyM3sH+UE5iv5uPS6vX7UIoh6m+vQc5LGBq52HBKPIn/zcSZVzeDEZg==}
 
   '@types/node@25.0.3':
     resolution: {integrity: sha512-W609buLVRVmeW693xKfzHeIV6nJGGz98uCPfeXI1ELMLXVeKYZ9m15fAMSaUPBHYLGFsVRcMmSCksQOrZV9BYA==}
@@ -1272,11 +1259,11 @@ snapshots:
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 24.10.4
+      '@types/node': 25.0.3
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 24.10.4
+      '@types/node': 25.0.3
 
   '@types/cookie-parser@1.4.10(@types/express@5.0.6)':
     dependencies:
@@ -1284,13 +1271,13 @@ snapshots:
 
   '@types/cors@2.8.19':
     dependencies:
-      '@types/node': 24.10.4
+      '@types/node': 25.0.3
 
   '@types/estree@1.0.8': {}
 
   '@types/express-serve-static-core@5.1.0':
     dependencies:
-      '@types/node': 24.10.4
+      '@types/node': 25.0.3
       '@types/qs': 6.14.0
       '@types/range-parser': 1.2.7
       '@types/send': 1.2.1
@@ -1303,10 +1290,6 @@ snapshots:
 
   '@types/http-errors@2.0.5': {}
 
-  '@types/node@24.10.4':
-    dependencies:
-      undici-types: 7.16.0
-
   '@types/node@25.0.3':
     dependencies:
       undici-types: 7.16.0
@@ -1317,17 +1300,17 @@ snapshots:
 
   '@types/send@1.2.1':
     dependencies:
-      '@types/node': 24.10.4
+      '@types/node': 25.0.3
 
   '@types/serve-static@2.2.0':
     dependencies:
       '@types/http-errors': 2.0.5
-      '@types/node': 24.10.4
+      '@types/node': 25.0.3
 
-  '@vitejs/plugin-vue@6.0.3(vite@7.3.0(@types/node@24.10.4)(tsx@4.21.0))(vue@3.5.26(typescript@5.9.3))':
+  '@vitejs/plugin-vue@6.0.3(vite@7.3.0(@types/node@25.0.3)(tsx@4.21.0))(vue@3.5.26(typescript@5.9.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.53
-      vite: 7.3.0(@types/node@24.10.4)(tsx@4.21.0)
+      vite: 7.3.0(@types/node@25.0.3)(tsx@4.21.0)
       vue: 3.5.26(typescript@5.9.3)
 
   '@volar/language-core@2.4.27':
@@ -1991,7 +1974,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@7.3.0(@types/node@24.10.4)(tsx@4.21.0):
+  vite@7.3.0(@types/node@25.0.3)(tsx@4.21.0):
     dependencies:
       esbuild: 0.27.2
       fdir: 6.5.0(picomatch@4.0.3)
@@ -2000,7 +1983,7 @@ snapshots:
       rollup: 4.54.0
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 24.10.4
+      '@types/node': 25.0.3
       fsevents: 2.3.3
       tsx: 4.21.0
 
