@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
+import type { HelloResponse } from 'shared-types';
 
-defineProps<{ msg: string }>()
+const message: HelloResponse = { message: 'hello world' };
 
-const count = ref(0)
+defineProps<{ msg: string }>();
+
+const count = ref(0);
 </script>
 
 <template>
@@ -18,18 +21,14 @@ const count = ref(0)
   </div>
 
   <p>
+    {{ message.message }}
     Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
+    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the official Vue + Vite
+    starter
   </p>
   <p>
     Learn more about IDE Support for Vue in the
-    <a
-      href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
-      target="_blank"
-      >Vue Docs Scaling up Guide</a
-    >.
+    <a href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support" target="_blank">Vue Docs Scaling up Guide</a>.
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
